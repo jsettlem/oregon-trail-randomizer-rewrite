@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 20;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
+  border-style: solid;
+  border-width: 6px;
+  -moz-border-image: url("../../assets/img/b1.png") 6 round;
+  -webkit-border-image: url("../../assets/img/b1.png") 6 round;
+  -o-border-image: url("../../assets/img/b1.png") 6 round;
+  border-image: url("../../assets/img/b1.png") 6 round;
+
+  background-image: url("../../assets/img/b3.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  transform: rotate(0deg);
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+div.images {
+  display: inline-block;
+  position: relative;
+  width: 200;
+  height: 1;
+  left: -300;
+  top: -350;
+}
+
+div.h1 {
+  font-size: 350%;
+  font-weight: bold;
+  font-family: 'Alegreya', serif;
+}
+
+img.glow {
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  z-index: -999;
+}
+
+img.wagon {
+  transform: scale(.5);
+  -ms-transform: scale(.5);
+  -webkit-transform: scale(.5);
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  z-index: 1;
+}
+
+div.box {
+  position: relative;
+  padding: 40px;
+  font-size: 135%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800;
+  height: 460;
+  background-color: #5CF9D8;
+  z-index: 50;
+  background-image: url("../../assets/img/b4.png");
+  background-size: 100% auto;
+  overflow-y: hidden;
+  font-size: 130%;
+}
+
+div.content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: 100% auto;
+  font-family: 'Alegreya', serif;
+  overflow-y: hidden;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+}
+
+div.column {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+button {
+  margin: 3px;
+  border-top: 1px solid #f7ecd9;
+  background: #cc9b60;
+  background: -webkit-linear-gradient(top, #f0d38f, #e9be66);
+  background: -moz-linear-gradient(top, #f0d38f, #e9be66);
+  background: -ms-linear-gradient(top, #f0d38f, #e9be66);
+  background: -o-linear-gradient(top, #f0d38f, #e9be66);
+  padding: 3px 6px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+  color: #0d0d0c;
+
+  font-family: 'Alegreya', serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+button: hover {
+  border-top-color: #bf9143;
+  background: #bf9143;
+  color: #f0eee4;
+}
+
+button: active {
+  border-top-color: #423105;
+  background: #423105;
+}
+
+button: disabled {
+  border-top-color: #423105;
+  background: #423105;
+  color: #f0eee4;
+}
+
+input {
+  text-align: center;
+  margin: 5;
+  font-family: 'Alegreya', serif;
+  font-size: 80%;
+  padding: 0;
+  border: 1px solid #000000;
+}
+
+input.drop {
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #FFFFFF url("../../assets/img/arrow.png") no-repeat;
+  background-position: right;
+  padding: 1px 16px 1px 1px;
+}

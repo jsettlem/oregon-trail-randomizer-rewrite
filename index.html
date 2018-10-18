@@ -1,11 +1,10 @@
-
 <html>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <head>
 <link href='http://fonts.googleapis.com/css?family=Alegreya:700,400' rel='stylesheet' type='text/css'>
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-19160637-1']);
@@ -17,257 +16,12 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
+</script>-->
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="assets/js/arrays.js"></script>
+<script src="assets/js/emotes.js"></script>
 
-
-<style type="text/css" > 
-body
-{
-margin:0;
-padding:20;
-height:100%;
-box-sizing:border-box;
--moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
-border-style: solid;
-border-width: 6px;
--moz-border-image: url(b1.png) 6 round;
--webkit-border-image: url(b1.png) 6 round;
--o-border-image: url(b1.png) 6 round;
-border-image: url(b1.png) 6 round;
-
-background-image:url(b3.png);
-overflow-x:hidden;
-overflow-y:hidden;
-
-transform: rotate(0deg);
-transition-property: transform;
-transition-duration: 0.5s;
-}
-
-div.images
-{
-display: inline-block;
-position:relative;
-width:200;
-height:1;
-left:-300;
-top:-350;
-
-}
-
-div.h1
-{
-font-size:350%;
-font-weight: bold;
-font-family: 'Alegreya', serif;
-}
-
-img.glow
-{
-position:absolute;
-left:5px;
-top:0px;
-z-index:-999;
-}
-
-img.wagon
-{
-transform: scale(.5);
--ms-transform: scale(.5); 
--webkit-transform: scale(.5); 
-position:absolute;
-left:5px;
-top:0px;
-z-index:1;
-}
-
-div.box
-{
-position:relative;
-padding:40px;
-font-size:135%;
-margin-top:30px;
-margin-left: auto;
-margin-right: auto;
-width:800;
-height:460;
-background-color:#5CF9D8;
-z-index:50;
-background-image:url(b4.png);
-background-size: 100% auto;
-overflow-y:hidden;
-font-size:130%;
-
-
-
-}
-div.content
-{
-position:relative;
-height:100%;
-width:100%;
-background-size: 100% auto;
-font-family: 'Alegreya', serif;
-overflow-y: hidden;
-transition: opacity 1s;
--webkit-transition: opacity 1s; 
-}
-
-div.column
-{
-position:relative;
-display: inline-block;
-vertical-align: top;
-width:50%;
-
-}
-
-
-button {
-    margin: 3px;
-   border-top: 1px solid #f7ecd9;
-   background: #cc9b60;
-
-   background: -webkit-linear-gradient(top, #f0d38f, #e9be66);
-   background: -moz-linear-gradient(top, #f0d38f, #e9be66);
-   background: -ms-linear-gradient(top, #f0d38f, #e9be66);
-   background: -o-linear-gradient(top, #f0d38f, #e9be66);
-   padding: 3px 6px;
-   -webkit-border-radius: 2px;
-   -moz-border-radius: 2px;
-   border-radius: 2px;
-
-  
-   color: #0d0d0c;
-
-   font-family: 'Alegreya', serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-button:hover {
-   border-top-color: #bf9143;
-   background: #bf9143;
-   color: #f0eee4;
-   }
-button:active {
-   border-top-color: #423105;
-   background: #423105;
-   }
-button:disabled {
-   border-top-color: #423105;
-   background: #423105;
-   color: #f0eee4;
-   }
-input {
-text-align: center; 
-margin: 5;
-font-family: 'Alegreya', serif;
-font-size:80%;
-padding:0;
-border: 1px solid #000000;
-
-} 
-input.drop {
-border-right: 2px solid #000000;
-border-bottom: 2px solid #000000;
-background:#FFFFFF url(arrow.png) no-repeat;
-background-position:right; 
-padding:1px 16px 1px 1px;
-}
-
-</style>
-<script src="arrays.js"></script>
-<script>
-var t = 0;
-var slide = 0;
-var rotspeeds = [1,-2,4];
-var yearstop = 0;
-var monies = 0;
-var rotate = 0;
-function transform(e,i,j){
-document.getElementById(e).style.webkitTransform = "rotate(" + i + "deg) scale(" + j + ")";
-document.getElementById(e).style.mozTransform = "rotate(" + i + "deg) scale(" + j + ")";
-document.getElementById(e).style.transform = "rotate(" + i + "deg) scale(" + j + ")";
-}
-
-function shuffle(o){ // http://jsfromhell.com/array/shuffle
-    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
-};
-
-for (k = 0; k < jids.length; k++) {
-shuffle(jthings[k]);
-
-}
-
-function stepo() {
-if (slide==0){
-for (k = 0; k < jids.length; k++) {
-if (jgoing[k]){
-document.getElementById(jids[k]).value=jthings[k][t % jthings[k].length];
-}
-}
-if (!jgoing[3] && jgoing[13]) {
-document.getElementById('j14').value=jcities[yearstop][0][t % 4];
-}
-if (!jgoing[3] && jgoing[14]) {
-document.getElementById('j15').value=jcities[yearstop][1][t % 4];
-}
-}
-t += rotspeeds[slide];
-transform("glowo",t,1);
-transform("wagon",Math.sin(t/5),0.5 + Math.sin(t/25)/30);
-if (isClock) {
-	clocks += 1;
-	document.getElementById('clock').value = clocks; 
-}
-}
-window.setInterval("stepo()",33);
-
-function jstop(l){
-if (l == 99) {
-	isClock = false;
-	document.getElementById('clock').style.background = "#E0E0E0 url(arrow.png) no-repeat right";
-}
-l = l-1;
-if (l < 13 || !jgoing[3]){
-jgoing[l] = false;
-if (l < 13){
-document.getElementById(jids[l]).style.background = "#E0E0E0 url(arrow.png) no-repeat right";
-}
-if (l == 13){
-document.getElementById('j14').style.background = "#E0E0E0 url(arrow.png) no-repeat right";
-}
-if (l == 14){
-document.getElementById('j15').style.background = "#E0E0E0 url(arrow.png) no-repeat right";
-}
-if (l == 1) {
-document.getElementById("jskills").value = jjobs[1][origjobs.indexOf(document.getElementById(jids[1]).value)];
-monies = monies + jjobs[0][origjobs.indexOf(document.getElementById(jids[1]).value)];
-}
-if (l == 4) {
-document.getElementById("jwagon").value = "$" + wprices[origwagons.indexOf(document.getElementById(jids[4]).value)];
-monies = monies - wprices[origwagons.indexOf(document.getElementById(jids[4]).value)];
-}
-if (l == 3) {
-yearstop = document.getElementById(jids[l]).value - 1840;
-}
-}
-if (l == 5) {
-	document.getElementById("wagon").src = document.getElementById(jids[l]).value + ".png";
-	document.getElementById("emote").src = document.getElementById(jids[l]).value + ".ogg";
-	document.getElementById("emote").load();
-	document.getElementById("emote").play();
-}
-document.getElementById("jmoney").value = "$" + monies;
-}
-
-function fun() {
-	rotate += 17.9;
-	document.getElementById("body").setAttribute("style","transform:rotate(" + rotate + "deg);");
-}
-
-</script>
 
 </head>
 
@@ -275,7 +29,7 @@ function fun() {
 
 <center>
 <div class=h1>
-Oregon Trail II Randomizer<div class=images><img id="glowo" class="glow" src=glow.png> <a href=# onclick="javascript:intro.load();intro.play();"><img id="wagon" class="wagon" src=wagon.png></a></div></div><p>
+Oregon Trail II Randomizer<div class=images><img id="glowo" class="glow" src="assets/img/glow.png"> <a href=# onclick="javascript:intro.load();intro.play();"><img id="wagon" class="wagon" src="assets/img/wagon.png"></a></div></div><p>
 
 
 <div class=box id=box>
@@ -299,18 +53,18 @@ worth <input autocomplete="off" type="text" id="jwagon" style="background:#E0E0E
 </center>
 
 </div><div class=column>
-Accompanied by <input autocomplete="off" class="drop" style="background:#E0E0E0 url(arrow.png) no-repeat right;" type="text" id="team" readonly="true" value="5" size="5"> others: <p>
+Accompanied by <input autocomplete="off" class="drop" style="background:#E0E0E0 url('assets/img/arrow.png') no-repeat right;" type="text" id="team" readonly="true" value="5" size="5"> others: <p>
 <input autocomplete="off" type="text" id="team" value="Team Red" size="10">, age <input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"><br>
 <input autocomplete="off" type="text" id="team"  value="Team Blue" size="10">, age <input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"><br>
 <input autocomplete="off" type="text" id="team" value="Team Green" size="10">, age <input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"><br>
 <input autocomplete="off" type="text" id="team" value="Team Pink" size="10">, age <input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"><br>
 <input autocomplete="off" type="text" value="Team Subs" size="10">, age <input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5">
 <span style="display:none">
-<img src="new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
+<img src="assets/img/new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
 </span>
 <br><br>Twtich Emote of the Day:<br><input autocomplete="off" class="drop" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
 <br><br>
-<img src="new.png" height=12pt> <button autocomplete="off" type="button" onmouseup="fun()" style="font-size:100%;font-weight: bold;">Do not press</button>
+<img src="assets/img/new.png" height=12pt> <button autocomplete="off" type="button" id="rotate-button" style="font-size:100%;font-weight: bold;">Do not press</button>
 
 <div style="display:none;">
 	<button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
@@ -329,7 +83,9 @@ Accompanied by <input autocomplete="off" class="drop" style="background:#E0E0E0 
 </div>
 
 </div>
-<br><span style="opacity:0.3" id="blurb">Piman was here, Tim is a loser. </span>
+<br><span style="opacity:0.3;" id="blurb">Piman was here, Tim is a loser.</span>
+<br>
+<br><span style="opacity:1.0;" id="blurb">Code available on <a href="https://gitlab.com/dlucadou/oregon-trail-randomizer">GitLab</a>.</span>
 <script>
 //do this
 function bout(i){
@@ -340,9 +96,9 @@ s2.style.opacity = "1";
 }
 </script>
 
-<audio id="intro" src="intro.ogg" preload="none"></audio>
-<audio id="trail" src="trail.ogg" preload="none"></audio>
-<audio id="emote" src="kappa.ogg" preload="none"></audio>
+<audio id="intro" src="assets/sounds/intro.ogg" preload="none"></audio>
+<audio id="trail" src="assets/sounds/trail.ogg" preload="none"></audio>
+<audio id="emote" src="assets/sounds/kappa.ogg" preload="none"></audio>
 
 </body>
 </html>
