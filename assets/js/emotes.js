@@ -15,8 +15,7 @@ function shuffle(o) { // http://jsfromhell.com/array/shuffle
 	return o;
 }
 
-function stepo() {
-  var t = 0;
+function stepo(t) {
 	var slide = 0;
 	var rotspeeds = [1, -2, 4];
 	var yearstop = 0;
@@ -41,6 +40,7 @@ function stepo() {
 		clocks += 1;
 		document.getElementById('clock').value = clocks;
 	}
+  return t;
 }
 
 $(window).on('load', function () {
@@ -60,7 +60,7 @@ $(window).on('load', function () {
 		shuffle(jthings[k]);
 	}
 
-	window.setInterval("stepo()", 33);
+	window.setInterval(function() { t = stepo(t); }, 33);
 
 	function jstop(l) {}
 });
