@@ -20,13 +20,12 @@ body {
   transform: rotate(0deg);
   transition-property: transform;
   transition-duration: 0.5s;
-  
-  
 }
 
   @media screen and (max-height: 779px) {
     body {
       padding: 0;
+      overflow-y: auto;
     }
   }
   @media screen and (max-width: 949px) {
@@ -42,8 +41,18 @@ div.images {
   height: 1;
   left: -300;
   top: -350;
-  
 }
+
+  @media screen and (max-height: 779px) {
+    div.images {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 949px) {
+    div.images {
+      display: none;
+    }
+  }
 
 div.h1 {
   font-size: 350%;
@@ -80,7 +89,8 @@ div.box {
   background-color: #5CF9D8;
   z-index: 50;
   background-image: url("/assets/img/b4.png");
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   overflow-y: hidden;
   font-size: 130%;
 }
@@ -88,11 +98,13 @@ div.box {
   @media screen and (max-height: 779px) {
     div.box {
       padding-left: 0px;
+      height: auto;
     }
   }
   @media screen and (max-width: 949px) {
     div.box {
       padding-left: 0px;
+      width: 80%;
     }
   }
 
