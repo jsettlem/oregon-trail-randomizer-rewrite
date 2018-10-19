@@ -1,30 +1,51 @@
 <html>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
 <head>
-<link href='http://fonts.googleapis.com/css?family=Alegreya:700,400' rel='stylesheet' type='text/css'>
-<!--<script type="text/javascript">
+  <title>Oregon Trail II Randomizer</title>
+  <meta charset="UTF-8" />
+  <meta property="og:url" content="https://your.domain.here/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Oregon Trail II Randomizer" />
+  <meta property="og:locale" content="en_US" />
+  <meta proeprty="og:description" content="A randomizer for the Oregon Trail II video game." />
+  <meta property="og:image" content="https://your.domain.here/assets/img/wagon-large.png" />
+  <meta property="og:image:alt" content="Oregon Trail Wagon" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta name="thumbnail" content="https://your.domain.here/assets/img/wagon-large.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@MonotoneTim" />
+  <meta name="twitter:url" content="https://some.website.here/" />
+  <meta name="twitter:title" content="Hey, it's MonotoneTim!" />
+  <meta name="twitter:image" content="https://your.domain.here/assets/img/wagon-large.png" />
+  <meta name="twitter:image:alt" content="Tim's Twitch avatar/logo" />
+  <meta name="twitter:description" content="The unofficial website for the Twitch streamer MonotoneTim. Come watch as he finds hilariously bad shovelware and breaks physics engines!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Alegreya:700,400' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <!--<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19160637-1']);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19160637-1']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-</script>-->
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="assets/js/arrays.js"></script>
-<script src="assets/js/emotes.js"></script>
-
-
+  </script>-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="assets/js/arrays.js"></script>
+  <script src="assets/js/emotes.js"></script>
 </head>
-
 <body id="body">
   <center>
   <div class=h1>
@@ -72,11 +93,13 @@
           Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
           <button autocomplete="off" type="button" onmouseup="out(s1)" style="font-size:100%;font-weight: bold;">Travel the Trail</button><br>
         </div>
+        <!-- If I comment this out, the JavaScript stops working entirely. Despite not being displayed, this section is essential for the page to function properly. -->
       </div>
     </div>
 
-    <div class=content style="visibility:0;opacity:0" id=s2>This isn't a div with things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things 
-    </div>
+    <!--<div class=content style="visibility:0;opacity:0" id=s2>This isn't a div with things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things 
+    </div>-->
+    <!-- I can't figure out why this is here, but removing it has had no noticeable effects -->
   </div>
   <br><span style="opacity:0.3;" id="blurb">Piman was here, Tim is a loser.</span>
   <br>
@@ -94,7 +117,8 @@
   <!-- I have yet to figure out what this script does, but disabling it doesn't have any ill effects. -->
 
   <audio id="intro" src="assets/sounds/intro.ogg" preload="none"></audio>
-  <audio id="trail" src="assets/sounds/trail.ogg" preload="none"></audio>
+  <!--<audio id="trail" src="assets/sounds/trail.ogg" preload="none"></audio>-->
+  <!-- This is never used because the section with the "Spin for party size" button has display:none, so the button that would trigger this audio is never displayed. -->
   <audio id="emote" src="assets/sounds/kappa.ogg" preload="none"></audio>
 </body>
 </html>

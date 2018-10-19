@@ -6,12 +6,12 @@ body {
   -moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
   border-style: solid;
   border-width: 6px;
-  -moz-border-image: url("../../assets/img/b1.png") 6 round;
-  -webkit-border-image: url("../../assets/img/b1.png") 6 round;
-  -o-border-image: url("../../assets/img/b1.png") 6 round;
-  border-image: url("../../assets/img/b1.png") 6 round;
+  -moz-border-image: url("/assets/img/b1.png") 6 round;
+  -webkit-border-image: url("/assets/img/b1.png") 6 round;
+  -o-border-image: url("/assets/img/b1.png") 6 round;
+  border-image: url("/assets/img/b1.png") 6 round;
 
-  background-image: url("../../assets/img/b3.png");
+  background-image: url("/assets/img/b3.png");
   overflow-x: hidden;
   overflow-y: hidden;
 
@@ -63,7 +63,7 @@ div.box {
   height: 460;
   background-color: #5CF9D8;
   z-index: 50;
-  background-image: url("../../assets/img/b4.png");
+  background-image: url("/assets/img/b4.png");
   background-size: 100% auto;
   overflow-y: hidden;
   font-size: 130%;
@@ -136,7 +136,7 @@ input {
 input.drop {
   border-right: 2px solid #000000;
   border-bottom: 2px solid #000000;
-  background: #FFFFFF url("../../assets/img/arrow.png") no-repeat;
+  background: #FFFFFF url("/assets/img/arrow.png") no-repeat;
   background-position: right;
   padding: 1px 16px 1px 1px;
 }
