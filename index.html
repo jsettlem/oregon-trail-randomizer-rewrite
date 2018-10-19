@@ -26,79 +26,75 @@
 </head>
 
 <body id="body">
+  <center>
+  <div class=h1>
+    Oregon Trail II Randomizer<div class=images><img id="glowo" class="glow" src="assets/img/glow.png"> <a href=# onclick="javascript:intro.load();intro.play();"><img id="wagon" class="wagon" src="assets/img/wagon.png"></a></div>
+  </div><p>
+  <noscript><br>This page requires JavaScript to be enabled.</noscript>
 
-<center>
-<div class=h1>
-Oregon Trail II Randomizer<div class=images><img id="glowo" class="glow" src="assets/img/glow.png"> <a href=# onclick="javascript:intro.load();intro.play();"><img id="wagon" class="wagon" src="assets/img/wagon.png"></a></div></div><p>
+  <div class=box id=box>
+    <div class=content id=s1>
+      <div class=column>
+        <center>
+        The Trail Journal of<br>
+        <input autocomplete="off" type="text" id="name" value="Tim" size="20" style="margin-top:8">
+        <p>
+        A(n) <input autocomplete="off" class="drop" type="text" id="j1" onmouseup="jstop(1)" readonly="true" value="Greenhorn" size="14">, formerly a <br>
+        <input autocomplete="off" class="drop" type="text" id="j2" onmouseup="jstop(2)" readonly="true" value="Banker" size="14"> who in <br>
+        <input autocomplete="off" class="drop" type="text" id="j3" onmouseup="jstop(3)" readonly="true" value="May" size="14">, <input autocomplete="off" class="drop" type="text" id="j4" onmouseup="jstop(4)" readonly="true" value="1848" size="10"><br>
+        set out from <input autocomplete="off" class="drop" type="text" id="j14" onmouseup="jstop(14)" readonly="true" value="Independence" size="14"><br>
+        to start a new life by settling in<br>
+        <input autocomplete="off" class="drop" type="text" id="j15" onmouseup="jstop(15)" readonly="true" value="Oregon City" size="24"><br>
+        with <input autocomplete="off" type="text" style="background:#E0E0E0" readonly="true" id="jskills" readonly="true" value="various" size="14"> skills,<br>
+        <input autocomplete="off" type="text" id="jmoney" style="background:#E0E0E0" readonly="true" value="$0" size="10"> dollars cash, and a <br>
+        <input autocomplete="off" class="drop" type="text" id="j5" onmouseup="jstop(5)" readonly="true" value="large farmwagon" size="24"><br>
+        worth <input autocomplete="off" type="text" id="jwagon" style="background:#E0E0E0" readonly="true" value="$0" size="10"> dollars. <br>
+        </center>
+      </div><div class="column">
+        <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
+        Accompanied by <input autocomplete="off" class="drop" style="background:#E0E0E0 url('assets/img/arrow.png') no-repeat right;" type="text" id="team" readonly="true" value="5" size="5"> others: <p>
+        <input autocomplete="off" type="text" id="team" value="Team Red" size="10">, age <input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"><br>
+        <input autocomplete="off" type="text" id="team"  value="Team Blue" size="10">, age <input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"><br>
+        <input autocomplete="off" type="text" id="team" value="Team Green" size="10">, age <input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"><br>
+        <input autocomplete="off" type="text" id="team" value="Team Pink" size="10">, age <input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"><br>
+        <input autocomplete="off" type="text" value="Team Subs" size="10">, age <input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5">
+        <span style="display:none">
+        <img src="assets/img/new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
+        </span>
+        <br><br>Twtich Emote of the Day:<br><input autocomplete="off" class="drop" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
+        <br><br>
+        <img src="assets/img/new.png" height=12pt> <button autocomplete="off" type="button" id="rotate-button" style="font-size:100%;font-weight: bold;">Do not press</button>
 
+        <div style="display:none;">
+          <button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
+          <br>
+          Pace: <input autocomplete="off" class="drop" type="text" id="j7" onmouseup="jstop(7)" readonly="true" value="8" size="2"> hours per day<br>
+          Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
+          <button autocomplete="off" type="button" onmouseup="out(s1)" style="font-size:100%;font-weight: bold;">Travel the Trail</button><br>
+        </div>
+      </div>
+    </div>
 
-<div class=box id=box>
+    <div class=content style="visibility:0;opacity:0" id=s2>This isn't a div with things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things 
+    </div>
+  </div>
+  <br><span style="opacity:0.3;" id="blurb">Piman was here, Tim is a loser.</span>
+  <br>
+  <br><span style="opacity:1.0;" id="blurb">Code available on <a href="https://gitlab.com/dlucadou/oregon-trail-randomizer">GitLab</a>.</span>
+  <!--<script>
+  //do this
+  function bout(i){
+  slide += 1;
+  box.removeChild(i);
+  s2.style.visibility = "visible";
+  s2.style.opacity = "1";
+  console.log(s2);
+  }
+  </script>-->
+  <!-- I have yet to figure out what this script does, but disabling it doesn't have any ill effects. -->
 
-<div class=content id=s1>
-<div class=column>
-<center>
-The Trail Journal of<br>
-<input autocomplete="off" type="text" id="name" value="Tim" size="20" style="margin-top:8">
-<p>
-A(n) <input autocomplete="off" class="drop" type="text" id="j1" onmouseup="jstop(1)" readonly="true" value="Greenhorn" size="14">, formerly a <br>
-<input autocomplete="off" class="drop" type="text" id="j2" onmouseup="jstop(2)" readonly="true" value="Banker" size="14"> who in <br>
-<input autocomplete="off" class="drop" type="text" id="j3" onmouseup="jstop(3)" readonly="true" value="May" size="14">, <input autocomplete="off" class="drop" type="text" id="j4" onmouseup="jstop(4)" readonly="true" value="1848" size="10"><br>
-set out from <input autocomplete="off" class="drop" type="text" id="j14" onmouseup="jstop(14)" readonly="true" value="Independence" size="14"><br>
-to start a new life by settling in<br>
-<input autocomplete="off" class="drop" type="text" id="j15" onmouseup="jstop(15)" readonly="true" value="Oregon City" size="24"><br>
-with <input autocomplete="off" type="text" style="background:#E0E0E0" readonly="true" id="jskills" readonly="true" value="various" size="14"> skills,<br>
-<input autocomplete="off" type="text" id="jmoney" style="background:#E0E0E0" readonly="true" value="$0" size="10"> dollars cash, and a <br>
-<input autocomplete="off" class="drop" type="text" id="j5" onmouseup="jstop(5)" readonly="true" value="large farmwagon" size="24"><br>
-worth <input autocomplete="off" type="text" id="jwagon" style="background:#E0E0E0" readonly="true" value="$0" size="10"> dollars. <br>
-</center>
-
-</div><div class=column>
-Accompanied by <input autocomplete="off" class="drop" style="background:#E0E0E0 url('assets/img/arrow.png') no-repeat right;" type="text" id="team" readonly="true" value="5" size="5"> others: <p>
-<input autocomplete="off" type="text" id="team" value="Team Red" size="10">, age <input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"><br>
-<input autocomplete="off" type="text" id="team"  value="Team Blue" size="10">, age <input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"><br>
-<input autocomplete="off" type="text" id="team" value="Team Green" size="10">, age <input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"><br>
-<input autocomplete="off" type="text" id="team" value="Team Pink" size="10">, age <input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"><br>
-<input autocomplete="off" type="text" value="Team Subs" size="10">, age <input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5">
-<span style="display:none">
-<img src="assets/img/new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
-</span>
-<br><br>Twtich Emote of the Day:<br><input autocomplete="off" class="drop" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
-<br><br>
-<img src="assets/img/new.png" height=12pt> <button autocomplete="off" type="button" id="rotate-button" style="font-size:100%;font-weight: bold;">Do not press</button>
-
-<div style="display:none;">
-	<button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
-	<br>
-	Pace: <input autocomplete="off" class="drop" type="text" id="j7" onmouseup="jstop(7)" readonly="true" value="8" size="2"> hours per day<br>
-	Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
-	<button autocomplete="off" type="button" onmouseup="out(s1)" style="font-size:100%;font-weight: bold;">Travel the Trail</button><br>
-</div>
-</div>
-
-
-
-</div>
-
-<div class=content style="visibility:0;opacity:0" id=s2>This isn't a div with things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things things 
-</div>
-
-</div>
-<br><span style="opacity:0.3;" id="blurb">Piman was here, Tim is a loser.</span>
-<br>
-<br><span style="opacity:1.0;" id="blurb">Code available on <a href="https://gitlab.com/dlucadou/oregon-trail-randomizer">GitLab</a>.</span>
-<script>
-//do this
-function bout(i){
-slide += 1;
-box.removeChild(i);
-s2.style.visibility = "visible";
-s2.style.opacity = "1";
-}
-</script>
-
-<audio id="intro" src="assets/sounds/intro.ogg" preload="none"></audio>
-<audio id="trail" src="assets/sounds/trail.ogg" preload="none"></audio>
-<audio id="emote" src="assets/sounds/kappa.ogg" preload="none"></audio>
-
+  <audio id="intro" src="assets/sounds/intro.ogg" preload="none"></audio>
+  <audio id="trail" src="assets/sounds/trail.ogg" preload="none"></audio>
+  <audio id="emote" src="assets/sounds/kappa.ogg" preload="none"></audio>
 </body>
 </html>

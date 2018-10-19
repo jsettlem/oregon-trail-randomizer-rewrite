@@ -1,7 +1,7 @@
 function fun(rotate) {
 	rotate += 17.9;
 	document.getElementById("body").setAttribute("style", "transform:rotate(" + rotate + "deg);");
-  return rotate;
+	return rotate;
 }
 
 function transform(e, i, j) {
@@ -19,7 +19,6 @@ function stepo(t) {
 	var slide = 0;
 	var rotspeeds = [1, -2, 4];
 	var yearstop = 0;
-	var monies = 0;
 	if (slide == 0) {
 		for (k = 0; k < jids.length; k++) {
 			if (jgoing[k]) {
@@ -40,7 +39,51 @@ function stepo(t) {
 		clocks += 1;
 		document.getElementById('clock').value = clocks;
 	}
-  return t;
+	return t;
+}
+
+var monies = 0;
+/* This variable has to be declared outside the method body
+ * or else it will be overwritten every time it is called.
+ * To ensure "$x dollars cash," is not reset to 0, NaN, or undefined,
+ * the variable is stored here.
+ */
+function jstop(l) {
+	if (l == 99) {
+		isClock = false;
+		document.getElementById('clock').style.background = "#E0E0E0 url('assets/img/arrow.png') no-repeat right";
+	}
+	l = l - 1;
+	if (l < 13 || !jgoing[3]) {
+		jgoing[l] = false;
+		if (l < 13) {
+			document.getElementById(jids[l]).style.background = "#E0E0E0 url('assets/img/arrow.png') no-repeat right";
+		}
+		if (l == 13) {
+			document.getElementById('j14').style.background = "#E0E0E0 url('assets/img/arrow.png') no-repeat right";
+		}
+		if (l == 14) {
+			document.getElementById('j15').style.background = "#E0E0E0 url('assets/img/arrow.png') no-repeat right";
+		}
+		if (l == 1) {
+			document.getElementById("jskills").value = jjobs[1][origjobs.indexOf(document.getElementById(jids[1]).value)];
+			monies = monies + jjobs[0][origjobs.indexOf(document.getElementById(jids[1]).value)];
+		}
+		if (l == 4) {
+			document.getElementById("jwagon").value = "$" + wprices[origwagons.indexOf(document.getElementById(jids[4]).value)];
+			monies = monies - wprices[origwagons.indexOf(document.getElementById(jids[4]).value)];
+		}
+		if (l == 3) {
+			yearstop = document.getElementById(jids[l]).value - 1840;
+		}
+	}
+	if (l == 5) {
+		document.getElementById("wagon").src = "assets/img/" + document.getElementById(jids[l]).value + ".png";
+		document.getElementById("emote").src = "assets/sounds/" + document.getElementById(jids[l]).value + ".ogg";
+		document.getElementById("emote").load();
+		document.getElementById("emote").play();
+	}
+	document.getElementById("jmoney").value = "$" + monies;
 }
 
 $(window).on('load', function () {
@@ -50,17 +93,17 @@ $(window).on('load', function () {
 	var yearstop = 0;
 	var monies = 0;
 	var rotate = 0;
-  
-  var rotateButton = document.getElementById('rotate-button');
-  rotateButton.onclick = function () {
-    rotate = fun(rotate);
-  }
+
+	var rotateButton = document.getElementById('rotate-button');
+	rotateButton.onclick = function () {
+		rotate = fun(rotate);
+	}
 
 	for (k = 0; k < jids.length; k++) {
 		shuffle(jthings[k]);
 	}
 
-	window.setInterval(function() { t = stepo(t); }, 33);
-
-	function jstop(l) {}
+	window.setInterval(function () {
+		t = stepo(t);
+	}, 33);
 });
