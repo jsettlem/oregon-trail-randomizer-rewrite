@@ -69,13 +69,13 @@
 <body id="body">
   <center>
   <div class=h1>
-    Oregon Trail II Randomizer<div class=images><img id="glowo" class="glow" src="assets/img/glow.png"> <a href=# onclick="javascript:intro.load();intro.play();"><img id="wagon" class="wagon" src="assets/img/wagon.png"></a></div>
+    Oregon Trail II Randomizer<div class="images"><img id="glowo" class="glow" src="assets/img/glow.png"> <a href=# onclick="javascript:intro.load();intro.play();"><img id="wagon" class="wagon" src="assets/img/wagon.png"></a></div>
   </div><p>
   <noscript><br>This page requires JavaScript to be enabled.</noscript>
 
-  <div class=box id=box>
-    <div class=content id=s1>
-      <div class=column>
+  <div class="box" id="box">
+    <div class="content" id="s1">
+      <div class="column">
         <center>
         The Trail Journal of<br>
         <input autocomplete="off" type="text" id="name" class="name-input" value="Tim" size="20">
@@ -89,7 +89,7 @@
         with <input autocomplete="off" type="text" readonly="true" id="jskills" class="readonly-input" readonly="true" value="various" size="14"> skills,<br>
         <input autocomplete="off" type="text" id="jmoney" class="readonly-input" readonly="true" value="$0" size="10"> dollars cash, and a <br>
         <input autocomplete="off" class="drop" type="text" id="j5" onmouseup="jstop(5)" readonly="true" value="large farmwagon" size="24"><br>
-        worth <input autocomplete="off" type="text" id="jwagon" class="readonly-input" readonly="true" value="$0" size="10"> dollars. <br>
+        worth <input autocomplete="off" type="text" id="jwagon" class="readonly-input" readonly="true" value="$0" size="10"> dollars. <br></p>
         </center>
       </div><div class="column">
         <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
@@ -140,5 +140,6 @@
   <!--<audio id="trail" src="assets/sounds/trail.ogg" preload="none"></audio>-->
   <!-- This is never used because the section with the "Spin for party size" button has display:none, so the button that would trigger this audio is never displayed. -->
   <!--<audio id="emote" src="assets/sounds/kappa.ogg" preload="none"></audio>-->
+  </center>
 </body>
 </html>

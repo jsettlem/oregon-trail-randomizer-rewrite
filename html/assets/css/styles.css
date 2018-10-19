@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 20;
-  height: 100%;
+  /*height: 100%;
+  width: 100%;*/
   box-sizing: border-box;
   -moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
   border-style: solid;
@@ -12,13 +13,27 @@ body {
   border-image: url("/assets/img/b1.png") 6 round;
 
   background-image: url("/assets/img/b3.png");
+  background-size: 100% auto;
   overflow-x: hidden;
   overflow-y: hidden;
 
   transform: rotate(0deg);
   transition-property: transform;
   transition-duration: 0.5s;
+  
+  
 }
+
+  @media screen and (max-height: 779px) {
+    body {
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: 949px) {
+    body {
+      padding: 0;
+    }
+  }
 
 div.images {
   display: inline-block;
@@ -27,6 +42,7 @@ div.images {
   height: 1;
   left: -300;
   top: -350;
+  
 }
 
 div.h1 {
@@ -60,7 +76,7 @@ div.box {
   margin-left: auto;
   margin-right: auto;
   width: 800;
-  height: 460;
+  height: 460; /* If width or height are commented out, the image repeats itself */
   background-color: #5CF9D8;
   z-index: 50;
   background-image: url("/assets/img/b4.png");
@@ -69,10 +85,21 @@ div.box {
   font-size: 130%;
 }
 
+  @media screen and (max-height: 779px) {
+    div.box {
+      padding-left: 0px;
+    }
+  }
+  @media screen and (max-width: 949px) {
+    div.box {
+      padding-left: 0px;
+    }
+  }
+
 div.content {
   position: relative;
-  height: 100%;
-  width: 100%;
+  /*height: 100%;
+  width: 100%;*/
   background-size: 100% auto;
   font-family: 'Alegreya', serif;
   overflow-y: hidden;
