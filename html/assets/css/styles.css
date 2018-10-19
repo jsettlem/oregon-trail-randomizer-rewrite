@@ -124,6 +124,11 @@ button: disabled {
   color: #f0eee4;
 }
 
+button.dont-press {
+  font-size: 100%;
+  font-weight: bold;
+}
+
 input {
   text-align: center;
   margin: 5;
@@ -139,4 +144,24 @@ input.drop {
   background: #FFFFFF url("/assets/img/arrow.png") no-repeat;
   background-position: right;
   padding: 1px 16px 1px 1px;
+}
+
+input.name-input {
+  margin-top: 0.5em; /* 8px; */
+}
+
+input.readonly-input {
+  background: #E0E0E0;
+}
+
+input.readonly-input.arrow {
+  background: #E0E0E0 url('/assets/img/arrow.png') no-repeat right;
+}
+
+span.footer {
+  opacity: 0.3;
+}
+
+.hide {
+  display: none;
 }
