@@ -45,11 +45,12 @@ div.images {
 
   @media screen and (max-height: 779px) {
     div.images {
-      display: none;
+      
     }
   }
   @media screen and (max-width: 949px) {
     div.images {
+      /* After I finish fixing everything else on mobile, I need to come back to this. It's a large stumbling block, so I'm putting it off for now. */
       display: none;
     }
   }
@@ -126,6 +127,35 @@ div.column {
   width: 50%;
 }
 
+  @media screen and (max-height: 779px) {
+    div.column {
+      
+    }
+  }
+  @media screen and (max-width: 949px) {
+    div.column {
+      display: block;
+    }
+  }
+
+div.row {
+  /*position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;*/
+}
+
+  @media screen and (max-height: 779px) {
+    div.row {
+      
+    }
+  }
+  @media screen and (max-width: 949px) {
+    div.row {
+      display: block-inline;
+    }
+  }
+
 button {
   margin: 3px;
   border-top: 1px solid #f7ecd9;
@@ -177,6 +207,19 @@ input {
   border: 1px solid #000000;
 }
 
+  @media screen and (max-height: 779px) {
+    input {
+      
+    }
+  }
+  @media screen and (max-width: 949px) {
+    input {
+      /*display: flex;
+      flex-direction: row;*/
+      padding-right: 1px;
+    }
+  }
+
 input.drop {
   border-right: 2px solid #000000;
   border-bottom: 2px solid #000000;
@@ -184,6 +227,18 @@ input.drop {
   background-position: right;
   padding: 1px 16px 1px 1px;
 }
+
+  @media screen and (max-height: 779px) {
+    input.drop {
+      
+    }
+  }
+  @media screen and (max-width: 949px) {
+    input.drop {
+      /*display: inline-block;*/
+      padding-right: 1px;
+    }
+  }
 
 input.name-input {
   margin-top: 0.5em; /* 8px; */
