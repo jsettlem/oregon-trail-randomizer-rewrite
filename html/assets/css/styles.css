@@ -1,8 +1,6 @@
 body {
   margin: 0;
   padding: 20;
-  /*height: 100%;
-  width: 100%;*/
   box-sizing: border-box;
   -moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
   border-style: solid;
@@ -29,9 +27,6 @@ body {
     }
   }
   @media screen and (max-width: 949px) {
-    body {
-      padding: 0;
-    }
   }
 
 div.images {
@@ -44,9 +39,6 @@ div.images {
 }
 
   @media screen and (max-height: 779px) {
-    div.images {
-      
-    }
   }
   @media screen and (max-width: 949px) {
     div.images {
@@ -293,9 +285,6 @@ input.drop {
 }
 
   @media screen and (max-height: 779px) {
-    input.drop {
-      
-    }
   }
   @media screen and (max-width: 949px) {
     input.drop {
@@ -338,9 +327,6 @@ span.footer {
 }
 
 @media screen and (max-height: 779px) {
-  .mobile-hide {
-    
-  }
 }
 @media screen and (max-width: 949px) {
   .mobile-hide {
