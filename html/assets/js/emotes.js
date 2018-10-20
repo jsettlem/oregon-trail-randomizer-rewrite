@@ -5,9 +5,14 @@ function fun(rotate) {
 }
 
 function transform(e, i, j) {
-	document.getElementById(e).style.webkitTransform = "rotate(" + i + "deg) scale(" + j + ")";
-	document.getElementById(e).style.mozTransform = "rotate(" + i + "deg) scale(" + j + ")";
-	document.getElementById(e).style.transform = "rotate(" + i + "deg) scale(" + j + ")";
+	document.getElementById(e).style.webkitTransform = "rotate(" + i % 360 + "deg) scale(" + j + ")";
+	document.getElementById(e).style.mozTransform = "rotate(" + i % 360 + "deg) scale(" + j + ")";
+	document.getElementById(e).style.transform = "rotate(" + i % 360 + "deg) scale(" + j + ")";
+  /* I do i % 360 to ensure the amount of memory required to store the rotation is
+   * kept low, especially when the browser window is open for a very long time.
+   * I doubt it will ever cause much of a performance hit, but I'm doing it anyway
+   * just to make sure it doesn't become a performance problem.
+   */
 }
 
 function shuffle(o) { // http://jsfromhell.com/array/shuffle

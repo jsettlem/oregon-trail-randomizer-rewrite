@@ -42,8 +42,12 @@ div.images {
   }
   @media screen and (max-width: 949px) {
     div.images {
-      /* After I finish fixing everything else on mobile, I need to come back to this. It's a large stumbling block, so I'm putting it off for now. */
-      display: none;
+      /* For some reason, the emote is above the spinning background, but below the "Oregon Trail II Randomizer" text. I need to fix this. */
+      position: fixed;
+      top: -200px;
+      width: 100px;
+      max-width: 100px;
+      z-index: -999;
     }
   }
 
@@ -70,6 +74,11 @@ img.wagon {
   z-index: 1;
 }
 
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+  }
+
 div.box {
   position: relative;
   padding: 40px;
@@ -79,7 +88,7 @@ div.box {
   margin-right: auto;
   width: 800;
   height: 460; /* If width or height are commented out, the image repeats itself */
-  background-color: #5CF9D8;
+  background-color: #F7EDCF;
   z-index: 50;
   background-image: url("/assets/img/b4.png");
   background-repeat: no-repeat;
