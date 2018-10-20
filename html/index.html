@@ -77,32 +77,33 @@
     <div class="content" id="s1">
       <div class="column">
         <center>
-        The Trail Journal of<br>
+        <div class="trail-journal">The Trail Journal of</div>
         <input autocomplete="off" type="text" id="name" class="name-input" value="Tim" size="20">
-        <p>
+        <p class="options">
         A(n) <input autocomplete="off" class="drop" type="text" id="j1" onmouseup="jstop(1)" readonly="true" value="Greenhorn" size="14">, formerly a <br>
-        <input autocomplete="off" class="drop" type="text" id="j2" onmouseup="jstop(2)" readonly="true" value="Banker" size="14"> who in <br>
+        <input autocomplete="off" class="drop" type="text" id="j2" onmouseup="jstop(2)" readonly="true" value="Banker" size="14"> who in <br class="mobile-hide">
         <input autocomplete="off" class="drop" type="text" id="j3" onmouseup="jstop(3)" readonly="true" value="May" size="14">, <input autocomplete="off" class="drop" type="text" id="j4" onmouseup="jstop(4)" readonly="true" value="1848" size="10"><br>
         set out from <input autocomplete="off" class="drop" type="text" id="j14" onmouseup="jstop(14)" readonly="true" value="Independence" size="14"><br>
         to start a new life by settling in<br>
-        <input autocomplete="off" class="drop" type="text" id="j15" onmouseup="jstop(15)" readonly="true" value="Oregon City" size="24"><br>
+        <input autocomplete="off" class="drop option-box large" type="text" id="j15" onmouseup="jstop(15)" readonly="true" value="Oregon City" size="24"><br>
         with <input autocomplete="off" type="text" readonly="true" id="jskills" class="readonly-input" readonly="true" value="various" size="14"> skills,<br>
         <input autocomplete="off" type="text" id="jmoney" class="readonly-input" readonly="true" value="$0" size="10"> dollars cash, and a <br>
-        <input autocomplete="off" class="drop" type="text" id="j5" onmouseup="jstop(5)" readonly="true" value="large farmwagon" size="24"><br>
+        <input autocomplete="off" class="drop option-box large" type="text" id="j5" onmouseup="jstop(5)" readonly="true" value="large farmwagon" size="24"><br>
         worth <input autocomplete="off" type="text" id="jwagon" class="readonly-input" readonly="true" value="$0" size="10"> dollars. <br></p>
         </center>
-      </div><div class="column">
+      </div><div class="column teams">
         <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
-        <div class="row">Accompanied by <input autocomplete="off" class="drop readonly-input arrow" type="text" id="team" readonly="true" value="5" size="5"> others: </div><p>
-        <div class="row"><input autocomplete="off" type="text" id="team" value="Team Red" size="10">, age <input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"></div>
-        <div class="row"><input autocomplete="off" type="text" id="team"  value="Team Blue" size="10">, age <input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"></div>
-        <div class="row"><input autocomplete="off" type="text" id="team" value="Team Green" size="10">, age <input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"></div>
-        <div class="row"><input autocomplete="off" type="text" id="team" value="Team Pink" size="10">, age <input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"></div>
-        <div class="row"><input autocomplete="off" type="text" value="Team Subs" size="10">, age <input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5"></div>
+        <div class="row accompanied">Accompanied by <input autocomplete="off" class="drop readonly-input arrow" type="text" id="team" readonly="true" value="5" size="5"> others: </div>
+      <div class="column teams list"><p></p>
+        <div class="row"><input autocomplete="off" type="text" id="team" value="Team Red" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"></div>
+        <div class="row"><input autocomplete="off" type="text" id="team"  value="Team Blue" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"></div>
+        <div class="row"><input autocomplete="off" type="text" id="team" value="Team Green" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"></div>
+        <div class="row"><input autocomplete="off" type="text" id="team" value="Team Pink" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"></div>
+        <div class="row"><input autocomplete="off" type="text" value="Team Subs" size="10"><div class="age">, age </div><input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5"></div></div>
         <span class="hide"> <!-- Unhiding this breaks stuff currently -->
           <img src="assets/img/new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
         </span>
-        <br><br>Twitch Emote of the Day:<br><input autocomplete="off" class="drop" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
+        <br><br><div class="emote-message">Twitch Emote of the Day:</div><br><input autocomplete="off" class="drop emote-box" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
         <br><br>
         <!--<img src="assets/img/new.png" height="12px">--><!-- This new badge is rather old... --> <button autocomplete="off" type="button" id="rotate-button" class="dont-press">Do not press</button>
 

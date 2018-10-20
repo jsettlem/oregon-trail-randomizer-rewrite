@@ -81,7 +81,7 @@ img.wagon {
 div.box {
   position: relative;
   padding: 40px;
-  font-size: 135%;
+  font-size: 130%;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -93,7 +93,6 @@ div.box {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow-y: hidden;
-  font-size: 130%;
 }
 
   @media screen and (max-height: 779px) {
@@ -127,32 +126,91 @@ div.column {
   width: 50%;
 }
 
+div.column.teams.list {
+  margin-left: -2em;
+}
+
   @media screen and (max-height: 779px) {
-    div.column {
-      
-    }
   }
   @media screen and (max-width: 949px) {
     div.column {
       display: block;
     }
+    div.column.teams {
+      display: inline;
+    }
   }
 
+div.age {
+  min-width: 2.5em;
+}
+
 div.row {
-  /*position: relative;
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;*/
+  display: flex;
+}
+
+div.row.accompanied {
+  display: inline;
 }
 
   @media screen and (max-height: 779px) {
-    div.row {
-      
-    }
   }
   @media screen and (max-width: 949px) {
+    div.age {
+      margin-left: -0.25em;
+    }
     div.row {
-      display: block-inline;
+      display: flex;
+      margin-left: 3em;
+      /* Things that seem to work
+      inline-flex - but "," and "age" are on different lines
+      flex - same as above
+      also use flex-direction: row;
+      */
+    }
+    div.row.accompanied {
+      margin-left: 2.1em;
+      margin-bottom: -1.5em;
+      display: flex;
+    }
+  }
+
+div.trail-journal {
+  
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.trail-journal {
+      margin-top: 1em;
+      margin-left: -0.25em;
+      min-width: 10em;
+    }
+  }  
+
+div.emote-message {
+  margin-bottom: -1em;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.emote-message {
+      margin-left: 2em;
+    }
+  }
+
+p.options {
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    p.options {
+      margin-top: 1em;
+      margin-left: -0.25em;
+      min-width: 10em;
     }
   }
 
@@ -208,9 +266,6 @@ input {
 }
 
   @media screen and (max-height: 779px) {
-    input {
-      
-    }
   }
   @media screen and (max-width: 949px) {
     input {
@@ -240,6 +295,19 @@ input.drop {
     }
   }
 
+input.emote-box {
+}
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    input.emote-box {
+      margin-left: 3.5em;
+    }
+    input.option-box.large {
+      margin-left: -0.25em;
+    }
+  }
+
 input.name-input {
   margin-top: 0.5em; /* 8px; */
 }
@@ -258,4 +326,15 @@ span.footer {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-height: 779px) {
+  .mobile-hide {
+    
+  }
+}
+@media screen and (max-width: 949px) {
+  .mobile-hide {
+    display: none;
+  }
 }
