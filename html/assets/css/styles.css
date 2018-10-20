@@ -309,7 +309,7 @@ input.emote-box {
   }
 
 input.name-input {
-  margin-top: 0.5em; /* 8px; */
+  margin-top: 0.5em;
 }
 
 input.readonly-input {
@@ -321,7 +321,7 @@ input.readonly-input.arrow {
 }
 
 span.footer {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .hide {
