@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 20;
-  height: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
   border-style: solid;
@@ -12,6 +11,7 @@ body {
   border-image: url("/assets/img/b1.png") 6 round;
 
   background-image: url("/assets/img/b3.png");
+  background-size: 100% auto;
   overflow-x: hidden;
   overflow-y: hidden;
 
@@ -19,6 +19,15 @@ body {
   transition-property: transform;
   transition-duration: 0.5s;
 }
+
+  @media screen and (max-height: 779px) {
+    body {
+      padding: 0;
+      overflow-y: auto;
+    }
+  }
+  @media screen and (max-width: 949px) {
+  }
 
 div.images {
   display: inline-block;
@@ -28,6 +37,19 @@ div.images {
   left: -300;
   top: -350;
 }
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.images {
+      /* For some reason, the emote is above the spinning background, but below the "Oregon Trail II Randomizer" text. I need to fix this. */
+      position: fixed;
+      top: -200px;
+      width: 100px;
+      max-width: 100px;
+      z-index: -999;
+    }
+  }
 
 div.h1 {
   font-size: 350%;
@@ -52,27 +74,46 @@ img.wagon {
   z-index: 1;
 }
 
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+  }
+
 div.box {
   position: relative;
   padding: 40px;
-  font-size: 135%;
+  font-size: 130%;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 800;
-  height: 460;
-  background-color: #5CF9D8;
+  height: 460; /* If width or height are commented out, the image repeats itself */
+  background-color: #F7EDCF;
   z-index: 50;
   background-image: url("/assets/img/b4.png");
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   overflow-y: hidden;
-  font-size: 130%;
 }
+
+  @media screen and (max-height: 779px) {
+    div.box {
+      padding-left: 0px;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 949px) {
+    div.box {
+      background-image: url("/assets/img/b4-vertical.png");
+      padding-left: 0px;
+      width: 80%;
+    }
+  }
 
 div.content {
   position: relative;
-  height: 100%;
-  width: 100%;
+  /*height: 100%;
+  width: 100%;*/
   background-size: 100% auto;
   font-family: 'Alegreya', serif;
   overflow-y: hidden;
@@ -86,6 +127,94 @@ div.column {
   vertical-align: top;
   width: 50%;
 }
+
+div.column.teams.list {
+  margin-left: -2em;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.column {
+      display: block;
+    }
+    div.column.teams {
+      display: inline;
+    }
+  }
+
+div.age {
+  min-width: 2.5em;
+}
+
+div.row {
+  display: flex;
+}
+
+div.row.accompanied {
+  display: inline;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.age {
+      margin-left: -0.25em;
+    }
+    div.row {
+      display: flex;
+      margin-left: 3em;
+      /* Things that seem to work
+      inline-flex - but "," and "age" are on different lines
+      flex - same as above
+      also use flex-direction: row;
+      */
+    }
+    div.row.accompanied {
+      margin-left: 2.1em;
+      margin-bottom: -1.5em;
+      display: flex;
+    }
+  }
+
+div.trail-journal {
+  
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.trail-journal {
+      margin-top: 1em;
+      margin-left: -0.25em;
+      min-width: 10em;
+    }
+  }  
+
+div.emote-message {
+  margin-bottom: -1em;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.emote-message {
+      margin-left: 2em;
+    }
+  }
+
+p.options {
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    p.options {
+      margin-top: 1em;
+      margin-left: -0.25em;
+      min-width: 10em;
+    }
+  }
 
 button {
   margin: 3px;
@@ -124,6 +253,19 @@ button: disabled {
   color: #f0eee4;
 }
 
+button.dont-press {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    button.dont-press {
+      margin-left: 2em;
+    }
+  }
+
 input {
   text-align: center;
   margin: 5;
@@ -133,10 +275,70 @@ input {
   border: 1px solid #000000;
 }
 
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    input {
+      /*display: flex;
+      flex-direction: row;*/
+      padding-right: 1px;
+    }
+  }
+
 input.drop {
   border-right: 2px solid #000000;
   border-bottom: 2px solid #000000;
   background: #FFFFFF url("/assets/img/arrow.png") no-repeat;
   background-position: right;
   padding: 1px 16px 1px 1px;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    input.drop {
+      /*display: inline-block;*/
+      padding-right: 1px;
+    }
+  }
+
+input.emote-box {
+}
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    input.emote-box {
+      margin-left: 3.5em;
+    }
+    input.option-box.large {
+      margin-left: -0.25em;
+    }
+  }
+
+input.name-input {
+  margin-top: 0.5em;
+}
+
+input.readonly-input {
+  background: #E0E0E0;
+}
+
+input.readonly-input.arrow {
+  background: #E0E0E0 url('/assets/img/arrow.png') no-repeat right;
+}
+
+span.footer {
+  opacity: 0.6;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-height: 779px) {
+}
+@media screen and (max-width: 949px) {
+  .mobile-hide {
+    display: none;
+  }
 }
