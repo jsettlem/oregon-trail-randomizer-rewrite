@@ -1,5 +1,17 @@
+"use strict";
+// Global variables
+var yearstop = 0;
+
 function fun(rotate) {
 	rotate += 17.9;
+    /* 17.9 is a brilliant value.
+     * I've calculated (n*17.9)%360 in Python and Excel to n=10,000,
+     * and it is never 0 (i.e. even if you press that button 10,000
+     * times, it will not go back to being perfectly level).
+     * There might be floating point errors that I am not noticing,
+     * but I tried both Python and Excel, which is good enough for me.
+     * Whoever originally created this, good job.
+     */
 	document.getElementById("body").setAttribute("style", "transform:rotate(" + rotate + "deg);");
 	return rotate;
 }
@@ -25,7 +37,7 @@ function stepo(t) {
 	var rotspeeds = [1, -2, 4];
 	var yearstop = 0;
 	if (slide == 0) {
-		for (k = 0; k < jids.length; k++) {
+		for (var k = 0; k < jids.length; k++) {
 			if (jgoing[k]) {
 				document.getElementById(jids[k]).value = jthings[k][t % jthings[k].length];
 			}
@@ -45,6 +57,12 @@ function stepo(t) {
 		document.getElementById('clock').value = clocks;
 	}
 	return t;
+}
+
+function playIntro() {
+  var audioElement = document.getElementById("intro");
+  audioElement.load();
+  audioElement.play();
 }
 
 var monies = 0;
@@ -91,11 +109,18 @@ function jstop(l) {
 	document.getElementById("jmoney").value = "$" + monies;
 }
 
+function preloadImages(imageUrls) {
+  imageUrls.forEach((imageUrl) => {
+    var preloadedImage = new Image();
+    preloadedImage.src = imageUrl;
+  });
+}
+
 $(window).on('load', function () {
 	var t = 0;
 	var slide = 0;
 	var rotspeeds = [1, -2, 4];
-	var yearstop = 0;
+	//var yearstop = 0;
 	var monies = 0;
 	var rotate = 0;
 
@@ -104,9 +129,55 @@ $(window).on('load', function () {
 		rotate = fun(rotate);
 	}
 
-	for (k = 0; k < jids.length; k++) {
+	for (var k = 0; k < jids.length; k++) {
 		shuffle(jthings[k]);
 	}
+  
+  // Event handlers
+  $('#wagon').on('click', playIntro);
+  $('#j1').on('click', function() {
+    jstop(1);
+  });
+  $('#j2').on('mouseup', function() {
+    jstop(2);
+  });
+  $('#j3').on('mouseup', function() {
+    jstop(3);
+  });
+  $('#j4').on('mouseup', function() {
+    jstop(4);
+  });
+  $('#j5').on('mouseup', function() {
+    jstop(5);
+  });
+  $('#j9').on('mouseup', function() {
+    jstop(9);
+  });
+  $('#j10').on('mouseup', function() {
+    jstop(10);
+  });
+  $('#j11').on('mouseup', function() {
+    jstop(11);
+  });
+  $('#j12').on('mouseup', function() {
+    jstop(12);
+  });
+  $('#j13').on('mouseup', function() {
+    jstop(13);
+  });
+  $('#j14').on('mouseup', function() {
+    jstop(14);
+  });
+  $('#j15').on('mouseup', function() {
+    jstop(15);
+  });
+  $('#clock').on('mouseup', function() {
+    jstop(99);
+  });
+
+  // Preload images
+  var images = ['assets/img/arrow.png'];
+  preloadImages(images);
 
 	window.setInterval(function () {
 		t = stepo(t);
