@@ -42,10 +42,10 @@ with the exception of Kappa, a global Twitch emote.
 
 > Did you make this?
 
-No. The website that originally hosted this is gone, but I have may have found
-their YouTube channel via Archive.org and used that to find their Twitter
-account. I reached out to them to ask if they created this, but have yet to
-receive a response. As far as I can tell, the first time the randomzier was
+No. [This](http://spookle.xyz/oregon/II/) is the original website that hosted
+the randomizer. The original creator is pimanrules (@pimanrules on Steam,
+Twitch, Twitter, and YouTube).  
+As far as I can tell, the first time the randomzier was
 used was on
 [June 21, 2013](https://twitter.com/monotonetim/status/348253984395497473)
 (credit for finding that goes to OldMario on Twitch).
@@ -59,5 +59,11 @@ and meta tags, fixed mobile formatting, and am working on enabling some
 
 > What is the license status of this project?
 
-Unknown. If the creator responds, hopefully they won't be opposed to my work and
-will give me permission to GPLv3 it.
+CC0. It's not really a software license, but it's what the original creator of
+the randomizer wants.
+
+> feel free to consider it CC0 for all I care, with the disclaimer that all the assets are stolen from the game  
+although the game is probably abandonware at this point so who cares  
+OSI doesn't recommend it but I don't care enough to find a software equivalent
+
+-pimanrules, March 21, 2020 at 5:10 PM
