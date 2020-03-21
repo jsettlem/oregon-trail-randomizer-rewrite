@@ -1,16 +1,20 @@
 html {
+  /* No matter what I have tried, I cannot prevent the a#audio-control wrapping the
+   * img.wagon to not overflow. This is the only way to prevent horizontal overflow.
+   * Even applying this to the body tag did not work. -_-
+   */
+  overflow-x: hidden;
+  /* Without height 100%, the border of the body will not stretch to the entire screen.
+   * https://stackoverflow.com/a/7049918
+   */
+  height: 100%;
 }
 
   @media screen and (max-height: 779px) {
   }
   @media screen and (max-width: 949px) {
-    html {
-      /* No matter what I have tried, I cannot prevent the a#audio-control wrapping the
-       * img.wagon to not overflow. This is the only way to prevent horizontal overflow.
-       * Even applying this to the body tag did not work. -_-
-       */
-      overflow-x: hidden;
-    }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 body {
@@ -28,11 +32,11 @@ body {
   background-image: url("/assets/img/b3.png");
   background-size: 100% auto;
   overflow-x: hidden;
-  overflow-y: hidden;
 
   transform: rotate(0deg);
   transition-property: transform;
   transition-duration: 0.5s;
+  height: 100%;
 }
 
   @media screen and (max-height: 779px) {
@@ -42,6 +46,8 @@ body {
     }
   }
   @media screen and (max-width: 949px) {
+  }
+  @media screen and (max-width: 440px) {
   }
 
 div.images {
@@ -63,14 +69,17 @@ div.images {
       max-width: 100px;
       z-index: -999;*/
       display: initial;
-      float: right;
+      float: left;
       overflow: hidden;
       position: absolute;
-      top: -300px;
+      /*top: -300px;
       right: -300px;
+      left: 50%;*/
       z-index: -999;
       width: initial;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 div.h1 {
@@ -78,6 +87,16 @@ div.h1 {
   font-weight: bold;
   font-family: 'Alegreya', serif;
 }
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.h1 span.header-title {
+      margin-left: 100px;
+    }
+  }
+  @media screen and (max-width: 440px) {
+  }
 
 img.glow {
   position: absolute;
@@ -90,8 +109,13 @@ img.glow {
   }
   @media screen and (max-width: 949px) {
     img.glow {
-      position: initial;
+      position: relative;
+      top: 50px;
+      top: 1em;
+      right: -2.5em;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 img.wagon {
@@ -100,7 +124,8 @@ img.wagon {
   -webkit-transform: scale(.5);
   position: absolute;
   left: 5px;
-  top: 0px;
+  /*top: 0px;*/
+  /*left: 50%;*/
   z-index: 1;
 }
 
@@ -108,8 +133,13 @@ img.wagon {
   }
   @media screen and (max-width: 949px) {
     img.wagon {
-      left: 150px;
+      top: 50px;
+      /*left: 0px;*/
+      top: 1em;
+      right: -2.5em;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 div.box {
@@ -119,8 +149,7 @@ div.box {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 800;
-  height: 460; /* If width or height are commented out, the image repeats itself */
+  max-width: 800px; /* Prevent super large box on larger screens. */
   background-color: #F7EDCF;
   z-index: 50;
   background-image: url("/assets/img/b4.png");
@@ -142,6 +171,8 @@ div.box {
       padding-left: 0px;
       overflow-y: auto; /* Allow scrolling on mobile devices */
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 div.content {
@@ -165,6 +196,8 @@ div.content {
       display: block;
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 
 div.column {
@@ -181,6 +214,26 @@ div.column {
       width: 100%;
     }
   }
+  @media screen and (max-width: 440px) {
+  }
+
+div.center-wrapper {
+  /* For when a div does not want to center properly without messing up the formatting of its contents. */
+  width: 100%;
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* Safari and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* W3C */
+  display: box;
+  box-pack: center;
+  box-align: center;
+  /* https://stackoverflow.com/a/12196466 */
+}
 
 div.column.teams {
 }
@@ -191,6 +244,8 @@ div.column.teams {
     div.column.teams:not(.list) {
       display: block;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 div.column.teams.list {
@@ -209,6 +264,8 @@ div.column.teams.list {
     div.column.teams.list {
       margin-left: 0em;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 div.age {
@@ -231,7 +288,7 @@ div.row.accompanied {
     }
     div.row {
       display: flex;
-      margin-left: 1.5em;
+      /*margin-left: 1.5em;*/
       /* Things that seem to work
       inline-flex - but "," and "age" are on different lines
       flex - same as above
@@ -246,10 +303,6 @@ div.row.accompanied {
     }
   }
   @media screen and (max-width: 440px) {
-    /* For very small screens, otherwise this would overflow */
-    div.row {
-      margin-left: -1em;
-    }
   }
 
 div.trail-journal {
@@ -265,6 +318,8 @@ div.trail-journal {
       min-width: 10em;
     }
   }  
+  @media screen and (max-width: 440px) {
+  }
 
 div.emote-message {
   margin-bottom: -1em;
@@ -276,6 +331,8 @@ div.emote-message {
     div.emote-message {
       /*margin-left: 2em;*/
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 p.options {
@@ -291,6 +348,8 @@ p.options {
       line-height: 37px; /* I measured screenshots to make sure this produces the exact same line-height on desktop and mobile. */
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 p.desktop-spacer {
 }
@@ -302,6 +361,8 @@ p.desktop-spacer {
     p.desktop-spacer {
       display: none;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 button {
@@ -353,6 +414,8 @@ button.dont-press {
       /*margin-left: 2em;*/
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 input {
   text-align: center;
@@ -372,6 +435,8 @@ input {
       padding-right: 1px;
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 input.drop {
   border-right: 2px solid #000000;
@@ -389,6 +454,8 @@ input.drop {
       padding-right: 1px;
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 input.emote-box {
 }
@@ -401,6 +468,8 @@ input.emote-box {
     input.option-box.large {
       margin-left: -0.25em;
     }
+  }
+  @media screen and (max-width: 440px) {
   }
 
 input.name-input {
@@ -425,6 +494,8 @@ span.desktop-show {
       display: none;
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 span.mobile-show {
   display: none;
@@ -437,19 +508,38 @@ span.mobile-show {
       display: initial;
     }
   }
+  @media screen and (max-width: 440px) {
+  }
 
 span.footer {
   opacity: 0.6;
 }
 
+br.br-short {
+  display: block;
+  margin: 1em;
+  font-size: 24%;
+  content: "";
+  /* A shorter <br>, from https://stackoverflow.com/a/28310011 */
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+  }
+  @media screen and (max-width: 440px) {
+  }
+
 .hide {
   display: none;
 }
 
-@media screen and (max-height: 779px) {
-}
-@media screen and (max-width: 949px) {
-  .mobile-hide {
-    display: none;
+  @media screen and (max-height: 779px) {
   }
-}
+  @media screen and (max-width: 949px) {
+  }
+  @media screen and (max-width: 440px) {
+    .mobile-hide {
+      display: none;
+    }
+  }

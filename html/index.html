@@ -57,8 +57,8 @@
 <body id="body">
   <center>
   <div class=h1>
-    <span class="mobile-show"><br /></span>
-    <span class="">Oregon Trail II Randomizer</span>
+    <span class="mobile-show"><br class="br-short"/></span>
+    <span class="header-title">Oregon Trail II Randomizer</span>
     <div class="images">
       <img id="glowo" class="glow" src="assets/img/glow.png"> <!-- ID is necessary because it is referenced in JS -->
       <a id="audio-control" href="#">
@@ -102,12 +102,8 @@
         </center>
       </div>
       <div class="column teams">
-        <span>
-          Nunc interdum euismod ex, non efficitur urna interdum ut. Nulla nec justo mauris. Aenean at ullamcorper odio. Nam tristique convallis risus convallis rhoncus. Etiam ac mauris tortor. Sed a justo at orci rutrum aliquam. Vestibulum quis lacus at augue gravida tristique at eu risus. Pellentesque sollicitudin pharetra fringilla. Mauris ut sem ante. Aliquam erat volutpat. Nam vehicula quam ex, a fringilla velit ornare pharetra. Curabitur blandit tortor eu fringilla accumsan. Maecenas sollicitudin mattis ligula, in aliquet orci volutpat sed.
-        </span>
-        <!--<center>
-          <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
-          <!--<div class="row accompanied">
+        <center>
+          <div class="row accompanied">
             <span>Accompanied by </span>
             <input autocomplete="off" class="drop readonly-input arrow" type="text" id="team-size" readonly="true" value="5" size="5">
             <span> others: </span>
@@ -115,35 +111,46 @@
           
           <div class="column teams list">
             <p class="desktop-spacer"></p>
-            <div class="row">
-              <input autocomplete="off" type="text" id="team-red" value="Team Red" size="10">
-              <div class="age">, age </div>
-              <input autocomplete="off" class="drop" type="text" id="j9" readonly="true" value="5" size="5">
+            <div class="center-wrapper">
+              <div class="row">
+                <input autocomplete="off" type="text" id="team-red" value="Team Red" size="10">
+                <div class="age">, age </div>
+                <input autocomplete="off" class="drop" type="text" id="j9" readonly="true" value="5" size="5">
+              </div>
             </div>
-            <div class="row">
-              <input autocomplete="off" type="text" id="team-blue"  value="Team Blue" size="10">
-              <div class="age">, age </div>
-              <input autocomplete="off" class="drop" type="text" id="j10" readonly="true" value="5" size="5">
+            <div class="center-wrapper">
+              <div class="row">
+                <input autocomplete="off" type="text" id="team-blue"  value="Team Blue" size="10">
+                <div class="age">, age </div>
+                <input autocomplete="off" class="drop" type="text" id="j10" readonly="true" value="5" size="5">
+              </div>
             </div>
-            <div class="row">
-              <input autocomplete="off" type="text" id="team-green" value="Team Green" size="10">
-              <div class="age">, age </div>
-              <input autocomplete="off" class="drop" type="text" id="j11" readonly="true" value="5" size="5">
+            <div class="center-wrapper">
+              <div class="row">
+                <input autocomplete="off" type="text" id="team-green" value="Team Green" size="10">
+                <div class="age">, age </div>
+                <input autocomplete="off" class="drop" type="text" id="j11" readonly="true" value="5" size="5">
+              </div>
             </div>
-            <div class="row">
-              <input autocomplete="off" type="text" id="team-pink" value="Team Pink" size="10">
-              <div class="age">, age </div>
-              <input autocomplete="off" class="drop" type="text" id="j12" readonly="true" value="5" size="5">
+            <div class="center-wrapper">
+              <div class="row">
+                <input autocomplete="off" type="text" id="team-pink" value="Team Pink" size="10">
+                <div class="age">, age </div>
+                <input autocomplete="off" class="drop" type="text" id="j12" readonly="true" value="5" size="5">
+              </div>
             </div>
-            <div class="row">
-              <input autocomplete="off" type="text" id="team-subs" value="Team Subs" size="10">
-              <div class="age">, age </div>
-              <input autocomplete="off"  class="drop" type="text" id="j13" readonly="true" value="5" size="5">
+            <div class="center-wrapper">
+              <div class="row">
+                <input autocomplete="off" type="text" id="team-subs" value="Team Subs" size="10">
+                <div class="age">, age </div>
+                <input autocomplete="off"  class="drop" type="text" id="j13" readonly="true" value="5" size="5">
+              </div>
             </div>
           </div>
           
           <span class=""> <!-- Unhiding this...used to break stuff? -->
-            <!--<img src="assets/img/new.png" height=12pt>
+            <br />
+            <img src="assets/img/new.png" height=12pt>
             <span> Grandfather Clocks:</span><br />
             <input autocomplete="off" class="drop" type="text" id="clock" readonly="true" value="0" size="25">
           </span>
@@ -155,13 +162,13 @@
           
           <div class="hide">
             <!-- If I comment this out, the JavaScript stops working entirely. -->
-            <!--<button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
+            <button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
             <br>
             Pace: <input autocomplete="off" class="drop" type="text" id="j7" onmouseup="jstop(7)" readonly="true" value="8" size="2"> hours per day<br>
             Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
             <button autocomplete="off" type="button" onmouseup="out(s1)" class="dont-press">Travel the Trail</button><br>
           </div>
-        </center>-->
+        </center>
       </div>
     </div>
   </div>

@@ -134,7 +134,7 @@ $(window).on('load', function () {
 	}
   
   // Event handlers
-  $('#audio-control').on('click', playIntro);
+  $('#wagon').on('click', playIntro);
   $('#j1').on('click', function() {
     jstop(1);
   });
