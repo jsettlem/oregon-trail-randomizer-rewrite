@@ -1,3 +1,18 @@
+html {
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    html {
+      /* No matter what I have tried, I cannot prevent the a#audio-control wrapping the
+       * img.wagon to not overflow. This is the only way to prevent horizontal overflow.
+       * Even applying this to the body tag did not work. -_-
+       */
+      overflow-x: hidden;
+    }
+  }
+
 body {
   margin: 0;
   padding: 20;
@@ -32,10 +47,9 @@ body {
 div.images {
   display: inline-block;
   position: relative;
-  width: 200;
-  height: 1;
-  left: -300;
-  top: -350;
+  width: 200px;
+  left: -300px;
+  top: -350px;
 }
 
   @media screen and (max-height: 779px) {
@@ -43,11 +57,19 @@ div.images {
   @media screen and (max-width: 949px) {
     div.images {
       /* For some reason, the emote is above the spinning background, but below the "Oregon Trail II Randomizer" text. I need to fix this. */
-      position: fixed;
+      /*position: fixed;
       top: -200px;
       width: 100px;
       max-width: 100px;
+      z-index: -999;*/
+      display: initial;
+      float: right;
+      overflow: hidden;
+      position: absolute;
+      top: -300px;
+      right: -300px;
       z-index: -999;
+      width: initial;
     }
   }
 
@@ -64,6 +86,14 @@ img.glow {
   z-index: -999;
 }
 
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    img.glow {
+      position: initial;
+    }
+  }
+
 img.wagon {
   transform: scale(.5);
   -ms-transform: scale(.5);
@@ -77,11 +107,14 @@ img.wagon {
   @media screen and (max-height: 779px) {
   }
   @media screen and (max-width: 949px) {
+    img.wagon {
+      left: 150px;
+    }
   }
 
 div.box {
   position: relative;
-  padding: 40px;
+  padding: 40px 0px;
   font-size: 130%;
   margin-top: 30px;
   margin-left: auto;
@@ -94,6 +127,7 @@ div.box {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow-y: hidden;
+  width: 80%;
 }
 
   @media screen and (max-height: 779px) {
@@ -106,7 +140,6 @@ div.box {
     div.box {
       background-image: url("/assets/img/b4-vertical.png");
       padding-left: 0px;
-      width: 80%;
       overflow-y: auto; /* Allow scrolling on mobile devices */
     }
   }
@@ -115,12 +148,24 @@ div.content {
   position: relative;
   /*height: 100%;
   width: 100%;*/
+  width: 90%;
   background-size: 100% auto;
   font-family: 'Alegreya', serif;
   overflow-y: hidden;
   transition: opacity 1s;
+  text-align: center;
+  display: flex;
   -webkit-transition: opacity 1s;
 }
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.content {
+      display: block;
+    }
+  }
+
 
 div.column {
   position: relative;
@@ -128,6 +173,14 @@ div.column {
   vertical-align: top;
   width: 50%;
 }
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.column {
+      width: 100%;
+    }
+  }
 
 div.column.teams {
 }
@@ -360,6 +413,29 @@ input.readonly-input {
 input.readonly-input.arrow {
   background: #E0E0E0 url('/assets/img/arrow.png') no-repeat right;
 }
+
+span.desktop-show {
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    span.desktop-show {
+      display: none;
+    }
+  }
+
+span.mobile-show {
+  display: none;
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    span.mobile-show {
+      display: initial;
+    }
+  }
 
 span.footer {
   opacity: 0.6;

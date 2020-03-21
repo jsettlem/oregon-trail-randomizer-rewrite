@@ -57,20 +57,26 @@
 <body id="body">
   <center>
   <div class=h1>
-    <span>Oregon Trail II Randomizer</span>
+    <span class="mobile-show"><br /></span>
+    <span class="">Oregon Trail II Randomizer</span>
     <div class="images">
       <img id="glowo" class="glow" src="assets/img/glow.png"> <!-- ID is necessary because it is referenced in JS -->
       <a id="audio-control" href="#">
         <img id="wagon" class="wagon" src="assets/img/wagon.png">
       </a>
     </div>
-  </div><p>
-  <noscript><br>This page requires JavaScript to be enabled.</noscript>
+  </div>
+  <p>
+    <noscript><br />This page requires JavaScript to be enabled.</noscript>
+  </p>
 
   <div class="box" id="box">
     <div class="content" id="s1">
       <div class="column">
-        <center>
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet laoreet venenatis. Praesent sit amet lectus a ex rutrum fringilla. Maecenas laoreet, velit eu sollicitudin euismod, dolor purus rhoncus sapien, sit amet pretium lorem elit id enim. Curabitur enim diam, interdum ullamcorper nisl non, maximus posuere ipsum. Quisque vestibulum, lorem eget tincidunt commodo, dolor sapien ultrices est, in hendrerit orci felis ut justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum maximus commodo urna ac luctus. Mauris in dolor blandit, tincidunt dui eu, lobortis mi.
+        </span>
+        <!--<center>
           <div class="trail-journal">The Trail Journal of</div>
           <input autocomplete="off" type="text" id="name" class="name-input" value="Tim" size="20">
           <p class="options">
@@ -96,11 +102,15 @@
             <input autocomplete="off" type="text" id="jwagon" class="readonly-input" readonly="true" value="$0" size="10">
             <span> dollars.</span><br />
           </p>
-        </center>
-      </div><div class="column teams">
-        <center>
+        </center>-->
+      </div>
+      <div class="column teams">
+        <span>
+          Nunc interdum euismod ex, non efficitur urna interdum ut. Nulla nec justo mauris. Aenean at ullamcorper odio. Nam tristique convallis risus convallis rhoncus. Etiam ac mauris tortor. Sed a justo at orci rutrum aliquam. Vestibulum quis lacus at augue gravida tristique at eu risus. Pellentesque sollicitudin pharetra fringilla. Mauris ut sem ante. Aliquam erat volutpat. Nam vehicula quam ex, a fringilla velit ornare pharetra. Curabitur blandit tortor eu fringilla accumsan. Maecenas sollicitudin mattis ligula, in aliquet orci volutpat sed.
+        </span>
+        <!--<center>
           <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
-          <div class="row accompanied">
+          <!--<div class="row accompanied">
             <span>Accompanied by </span>
             <input autocomplete="off" class="drop readonly-input arrow" type="text" id="team-size" readonly="true" value="5" size="5">
             <span> others: </span>
@@ -136,7 +146,7 @@
           </div>
           
           <span class=""> <!-- Unhiding this...used to break stuff? -->
-            <img src="assets/img/new.png" height=12pt>
+            <!--<img src="assets/img/new.png" height=12pt>
             <span> Grandfather Clocks:</span><br />
             <input autocomplete="off" class="drop" type="text" id="clock" readonly="true" value="0" size="25">
           </span>
@@ -148,13 +158,13 @@
           
           <div class="hide">
             <!-- If I comment this out, the JavaScript stops working entirely. -->
-            <button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
+            <!--<button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
             <br>
             Pace: <input autocomplete="off" class="drop" type="text" id="j7" onmouseup="jstop(7)" readonly="true" value="8" size="2"> hours per day<br>
             Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
             <button autocomplete="off" type="button" onmouseup="out(s1)" class="dont-press">Travel the Trail</button><br>
           </div>
-        </center>
+        </center>-->
       </div>
     </div>
   </div>
