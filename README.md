@@ -21,7 +21,7 @@ Pages, S3, Nginx, etc. out of the box).
 
 This was originally created for the Twitch streamer
 [MonotoneTim](https://www.twitch.tv/MonotoneTim), who played Oregon Trail II a
-lot on his streams. The emotes that rotate around are his subscriber emotes,
+lot on her streams. The emotes that rotate around are her subscriber emotes,
 with the exception of Kappa, a global Twitch emote.
 
 > Did you make this?

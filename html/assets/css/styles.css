@@ -107,6 +107,7 @@ div.box {
       background-image: url("/assets/img/b4-vertical.png");
       padding-left: 0px;
       width: 80%;
+      overflow-y: auto; /* Allow scrolling on mobile devices */
     }
   }
 
@@ -128,6 +129,17 @@ div.column {
   width: 50%;
 }
 
+div.column.teams {
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    div.column.teams:not(.list) {
+      display: block;
+    }
+  }
+
 div.column.teams.list {
   margin-left: -2em;
 }
@@ -140,6 +152,9 @@ div.column.teams.list {
     }
     div.column.teams {
       display: inline;
+    }
+    div.column.teams.list {
+      margin-left: 0em;
     }
   }
 
@@ -163,7 +178,7 @@ div.row.accompanied {
     }
     div.row {
       display: flex;
-      margin-left: 3em;
+      margin-left: 1.5em;
       /* Things that seem to work
       inline-flex - but "," and "age" are on different lines
       flex - same as above
@@ -173,7 +188,14 @@ div.row.accompanied {
     div.row.accompanied {
       margin-left: 2.1em;
       margin-bottom: -1.5em;
-      display: flex;
+      /*display: flex;*/
+      display: contents;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    /* For very small screens, otherwise this would overflow */
+    div.row {
+      margin-left: -1em;
     }
   }
 
@@ -199,7 +221,7 @@ div.emote-message {
   }
   @media screen and (max-width: 949px) {
     div.emote-message {
-      margin-left: 2em;
+      /*margin-left: 2em;*/
     }
   }
 
@@ -213,6 +235,18 @@ p.options {
       margin-top: 1em;
       margin-left: -0.25em;
       min-width: 10em;
+    }
+  }
+
+p.desktop-spacer {
+}
+
+  @media screen and (max-height: 779px) {
+  }
+  @media screen and (max-width: 949px) {
+    /* Only present on 2-column layouts. */
+    p.desktop-spacer {
+      display: none;
     }
   }
 
@@ -262,7 +296,7 @@ button.dont-press {
   }
   @media screen and (max-width: 949px) {
     button.dont-press {
-      margin-left: 2em;
+      /*margin-left: 2em;*/
     }
   }
 
@@ -308,7 +342,7 @@ input.emote-box {
   }
   @media screen and (max-width: 949px) {
     input.emote-box {
-      margin-left: 3.5em;
+      /*margin-left: 3.5em;*/
     }
     input.option-box.large {
       margin-left: -0.25em;

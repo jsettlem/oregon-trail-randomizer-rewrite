@@ -80,41 +80,48 @@
           </p>
         </center>
       </div><div class="column teams">
-        <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
-        <div class="row accompanied">Accompanied by <input autocomplete="off" class="drop readonly-input arrow" type="text" id="team" readonly="true" value="5" size="5"> others: </div>
-        
-        <div class="column teams list"><p></p>
-          <div class="row"><input autocomplete="off" type="text" id="team" value="Team Red" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"></div>
-          <div class="row"><input autocomplete="off" type="text" id="team"  value="Team Blue" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"></div>
-          <div class="row"><input autocomplete="off" type="text" id="team" value="Team Green" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"></div>
-          <div class="row"><input autocomplete="off" type="text" id="team" value="Team Pink" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"></div>
-          <div class="row"><input autocomplete="off" type="text" value="Team Subs" size="10"><div class="age">, age </div><input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5"></div>
-        </div>
-        
-        <span class="hide"> <!-- Unhiding this breaks stuff currently -->
-          <img src="assets/img/new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
-        </span>
-        
-        <br><br><div class="emote-message">Twitch Emote of the Day:</div><br><input autocomplete="off" class="drop emote-box" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
-        <br><br>
-        
-        <button autocomplete="off" type="button" id="rotate-button" class="dont-press">Do not press</button>
-        
-        <div class="hide">
-          <!-- If I comment this out, the JavaScript stops working entirely. -->
-          <button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
-          <br>
-          Pace: <input autocomplete="off" class="drop" type="text" id="j7" onmouseup="jstop(7)" readonly="true" value="8" size="2"> hours per day<br>
-          Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
-          <button autocomplete="off" type="button" onmouseup="out(s1)" class="dont-press">Travel the Trail</button><br>
-        </div>
+        <center>
+          <!-- For some reason, if I put </div> and <div class="column"> onto separate lines, the column disappears. I can't figure out why. -->
+          <div class="row accompanied">
+            <span>Accompanied by </span>
+            <input autocomplete="off" class="drop readonly-input arrow" type="text" id="team" readonly="true" value="5" size="5">
+            <span> others: </span>
+          </div>
+          
+          <div class="column teams list">
+            <p class="desktop-spacer"></p>
+            <div class="row"><input autocomplete="off" type="text" id="team" value="Team Red" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j9" onmouseup="jstop(9)" readonly="true" value="5" size="5"></div>
+            <div class="row"><input autocomplete="off" type="text" id="team"  value="Team Blue" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j10" onmouseup="jstop(10)" readonly="true" value="5" size="5"></div>
+            <div class="row"><input autocomplete="off" type="text" id="team" value="Team Green" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j11" onmouseup="jstop(11)" readonly="true" value="5" size="5"></div>
+            <div class="row"><input autocomplete="off" type="text" id="team" value="Team Pink" size="10"><div class="age">, age </div><input autocomplete="off" class="drop" type="text" id="j12" onmouseup="jstop(12)" readonly="true" value="5" size="5"></div>
+            <div class="row"><input autocomplete="off" type="text" value="Team Subs" size="10"><div class="age">, age </div><input autocomplete="off"  class="drop" type="text" id="j13" onmouseup="jstop(13)" readonly="true" value="5" size="5"></div>
+          </div>
+          
+          <span class="hide"> <!-- Unhiding this breaks stuff currently -->
+            <img src="assets/img/new.png" height=12pt> Grandfather Clocks:<br><input autocomplete="off" class="drop" type="text" id="clock" onmouseup="jstop(99)" readonly="true" value="0" size="25">
+          </span>
+          
+          <br><br><div class="emote-message">Twitch Emote of the Day:</div><br><input autocomplete="off" class="drop emote-box" type="text" id="j6" onmouseup="jstop(6)" readonly="true" value="Large" size="25">
+          <br><br>
+          
+          <button autocomplete="off" type="button" id="rotate-button" class="dont-press">Do not press</button>
+          
+          <div class="hide">
+            <!-- If I comment this out, the JavaScript stops working entirely. -->
+            <button autocomplete="off" type="button" onmouseup="out(s1)">Spin for party size</button>
+            <br>
+            Pace: <input autocomplete="off" class="drop" type="text" id="j7" onmouseup="jstop(7)" readonly="true" value="8" size="2"> hours per day<br>
+            Rations: <input autocomplete="off" class="drop" type="text" id="j8" onmouseup="jstop(8)" readonly="true" value="Filling" size="10"><br>
+            <button autocomplete="off" type="button" onmouseup="out(s1)" class="dont-press">Travel the Trail</button><br>
+          </div>
+        </center>
       </div>
     </div>
   </div>
   
   <br><span class="footer" id="blurb">Piman was here, Tim is a loser.</span>
   <br>
-  <br><span class="footer" id="blurb">Code available on <a href="https://gitlab.com/dlucadou/oregon-trail-randomizer">GitLab</a>.</span>
+  <br><span class="footer" id="blurb">Code available on <a href="https://gitlab.com/lucadou/oregon-trail-randomizer">GitLab</a>.</span>
   <br><br>
   <!--<script>
   //do this
