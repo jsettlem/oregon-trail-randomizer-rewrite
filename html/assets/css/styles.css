@@ -24,12 +24,12 @@ body {
   -moz-box-sizing: border-box; /*I hate Firefox and everything it stands for*/
   border-style: solid;
   border-width: 6px;
-  -moz-border-image: url("/assets/img/b1.png") 6 round;
-  -webkit-border-image: url("/assets/img/b1.png") 6 round;
-  -o-border-image: url("/assets/img/b1.png") 6 round;
-  border-image: url("/assets/img/b1.png") 6 round;
+  -moz-border-image: url("../img/b1.png") 6 round;
+  -webkit-border-image: url("../img/b1.png") 6 round;
+  -o-border-image: url("../img/b1.png") 6 round;
+  border-image: url("../img/b1.png") 6 round;
 
-  background-image: url("/assets/img/b3.png");
+  background-image: url("../img/b3.png");
   background-size: 100% auto;
   overflow-x: hidden;
 
@@ -152,7 +152,7 @@ div.box {
   max-width: 800px; /* Prevent super large box on larger screens. */
   background-color: #F7EDCF;
   z-index: 50;
-  background-image: url("/assets/img/b4.png");
+  background-image: url("../img/b4.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow-y: hidden;
@@ -167,7 +167,7 @@ div.box {
   }
   @media screen and (max-width: 949px) {
     div.box {
-      background-image: url("/assets/img/b4-vertical.png");
+      background-image: url("../img/b4-vertical.png");
       padding-left: 0px;
       overflow-y: auto; /* Allow scrolling on mobile devices */
     }
@@ -441,7 +441,7 @@ input {
 input.drop {
   border-right: 2px solid #000000;
   border-bottom: 2px solid #000000;
-  background: #FFFFFF url("/assets/img/arrow.png") no-repeat;
+  background: #FFFFFF url("../img/arrow.png") no-repeat;
   background-position: right;
   padding: 1px 16px 1px 1px;
 }
@@ -481,7 +481,7 @@ input.readonly-input {
 }
 
 input.readonly-input.arrow {
-  background: #E0E0E0 url('/assets/img/arrow.png') no-repeat right;
+  background: #E0E0E0 url('../img/arrow.png') no-repeat right;
 }
 
 span.desktop-show {
